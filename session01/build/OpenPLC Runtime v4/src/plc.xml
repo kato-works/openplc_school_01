@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0201" xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:ns1="http://www.plcopen.org/xml/tc6_0201">
+  <fileHeader companyName="Unknown" productName="Unnamed" productVersion="1" creationDateTime="2025-12-31T15:27:39"/>
+  <contentHeader name="Unnamed" modificationDateTime="2025-12-31T15:27:39">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="16" y="16"/>
+      </fbd>
+      <ld>
+        <scaling x="16" y="16"/>
+      </ld>
+      <sfc>
+        <scaling x="16" y="16"/>
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes/>
+    <pous>
+      <pou name="main" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="SW1" address="%IX0.3">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="SW2" address="%IX0.4">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR1" address="%QX2.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR2" address="%QX2.1">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR3" address="%QX0.0">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR4">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR5">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR6">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+            <variable name="CR7">
+              <type>
+                <BOOL/>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <LD>
+            <leftPowerRail localId="3881251" width="3" height="40">
+              <position x="0" y="30"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="3" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <leftPowerRail localId="5829565" width="3" height="40">
+              <position x="0" y="150"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="3" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <leftPowerRail localId="7067745" width="3" height="40">
+              <position x="0" y="270"/>
+              <connectionPointOut formalParameter="">
+                <relPosition x="3" y="20"/>
+              </connectionPointOut>
+            </leftPowerRail>
+            <rightPowerRail localId="2796028" width="3" height="40">
+              <position x="320" y="30"/>
+              <connectionPointIn>
+                <relPosition x="3" y="20"/>
+                <connection refLocalId="10646133" formalParameter="output">
+                  <position x="297" y="50"/>
+                  <position x="210" y="50"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <rightPowerRail localId="8455491" width="3" height="40">
+              <position x="320" y="150"/>
+              <connectionPointIn>
+                <relPosition x="3" y="20"/>
+                <connection refLocalId="8663031" formalParameter="output">
+                  <position x="297" y="170"/>
+                  <position x="210" y="170"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <rightPowerRail localId="10385371" width="3" height="40">
+              <position x="442" y="270"/>
+              <connectionPointIn>
+                <relPosition x="3" y="20"/>
+                <connection refLocalId="10391514" formalParameter="output">
+                  <position x="297" y="290"/>
+                  <position x="332" y="290"/>
+                </connection>
+              </connectionPointIn>
+            </rightPowerRail>
+            <contact localId="9559289" negated="false" width="24" height="24">
+              <position x="68" y="38"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="3881251" formalParameter="left-rail">
+                  <position x="68" y="50"/>
+                  <position x="3" y="50"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="24" y="12"/>
+              </connectionPointOut>
+              <variable>SW1</variable>
+            </contact>
+            <contact localId="1465445" negated="false" width="24" height="24">
+              <position x="68" y="158"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="5829565" formalParameter="left-rail">
+                  <position x="68" y="170"/>
+                  <position x="3" y="170"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="24" y="12"/>
+              </connectionPointOut>
+              <variable>SW2</variable>
+            </contact>
+            <contact localId="10443892" negated="false" width="24" height="24">
+              <position x="72" y="278"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="7067745" formalParameter="left-rail">
+                  <position x="72" y="290"/>
+                  <position x="3" y="290"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="24" y="12"/>
+              </connectionPointOut>
+              <variable>CR1</variable>
+            </contact>
+            <contact localId="6573308" negated="false" width="24" height="24">
+              <position x="72" y="370"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="7067745" formalParameter="left-rail">
+                  <position x="72" y="382"/>
+                  <position x="27" y="382"/>
+                  <position x="27" y="290"/>
+                  <position x="3" y="290"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="24" y="12"/>
+              </connectionPointOut>
+              <variable>CR3</variable>
+            </contact>
+            <contact localId="3329796" negated="true" width="24" height="24">
+              <position x="190" y="278"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="10443892" formalParameter="output">
+                  <position x="190" y="290"/>
+                  <position x="96" y="290"/>
+                </connection>
+                <connection refLocalId="6573308" formalParameter="output">
+                  <position x="190" y="290"/>
+                  <position x="145" y="290"/>
+                  <position x="145" y="382"/>
+                  <position x="96" y="382"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="24" y="12"/>
+              </connectionPointOut>
+              <variable>CR2</variable>
+            </contact>
+            <coil localId="10646133" negated="false" width="28" height="24">
+              <position x="182" y="38"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="9559289" formalParameter="output">
+                  <position x="182" y="50"/>
+                  <position x="92" y="50"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="28" y="12"/>
+              </connectionPointOut>
+              <variable>CR1</variable>
+            </coil>
+            <coil localId="8663031" negated="false" width="28" height="24">
+              <position x="182" y="158"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="1465445" formalParameter="output">
+                  <position x="182" y="170"/>
+                  <position x="92" y="170"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="28" y="12"/>
+              </connectionPointOut>
+              <variable>CR2</variable>
+            </coil>
+            <coil localId="10391514" negated="false" width="28" height="24">
+              <position x="304" y="278"/>
+              <connectionPointIn>
+                <relPosition x="0" y="12"/>
+                <connection refLocalId="3329796" formalParameter="output">
+                  <position x="304" y="290"/>
+                  <position x="214" y="290"/>
+                </connection>
+              </connectionPointIn>
+              <connectionPointOut>
+                <relPosition x="28" y="12"/>
+              </connectionPointOut>
+              <variable>CR3</variable>
+            </coil>
+          </LD>
+        </body>
+        <documentation>
+          <xhtml:p><![CDATA[ ]]></xhtml:p>
+        </documentation>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations>
+      <configuration name="Config0">
+        <resource name="Res0">
+          <task name="task0" priority="1" interval="T#20ms">
+            <pouInstance name="instance0" typeName="main"/>
+          </task>
+        </resource>
+      </configuration>
+    </configurations>
+  </instances>
+</project>
